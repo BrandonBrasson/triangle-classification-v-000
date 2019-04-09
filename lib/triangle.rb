@@ -44,8 +44,6 @@ def sum(triangle_side)
    else
      return :scalene
     end
-  else
-    raise TriangleError
   end
 end
 end

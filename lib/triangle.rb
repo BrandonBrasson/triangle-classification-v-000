@@ -37,12 +37,13 @@ def valid?
 end
 
 def sum(triangle_side)
-  if @triangle_sides.uniq.length == 1
-     return :equilateral
- elsif @triangle_sides.uniq.length == 2
-     return :isosceles
-   else @triangle_sides.uniq.length == 3
-     return :scalene
+if valid?
+    if @triangle_sides.uniq.length == 1
+      return :equilateral
+    elsif @triangle_sides.uniq.length == 2
+      return :isosceles
+    else
+      return :scalene
     end
   else
     raise TriangleError

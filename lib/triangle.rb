@@ -23,6 +23,7 @@ class Triangle
   #  end
 #  end
 
+def valid?
   sum_one_two = @triangle_sides[0] + @triangle_sides[1]
   sum_one_three = @triangle_sides[0] + @triangle_sides[2]
   sum_two_three = @triangle_sides[1] + @triangle_sides[2]
@@ -58,3 +59,7 @@ end
 
       #else
       #  puts "The line is currently empty."
+
+
+
+

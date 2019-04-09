@@ -45,7 +45,7 @@ def kind
     else
       return :scalene
     end
-  
+
 end
 
 

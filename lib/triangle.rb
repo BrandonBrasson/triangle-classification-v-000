@@ -49,7 +49,7 @@ def kind
 end
 
 
-class TriangleError < StandardError
+class TriangleError 
 
 end
 

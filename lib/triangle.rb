@@ -36,7 +36,7 @@ def valid?
   end
 end
 
-def sum(triangle_side)  
+def sum(triangle_side)
 if valid?
     if @triangle_sides.uniq.length == 1
       return :equilateral

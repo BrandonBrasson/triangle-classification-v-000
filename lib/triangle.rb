@@ -42,7 +42,7 @@ def sum(triangle_side)
       return :equilateral
     elsif @triangle_sides.uniq.length == 2
       return :isosceles
-   else
+   elsif
      return :scalene
   else
     raise TriangleError

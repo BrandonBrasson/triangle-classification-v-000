@@ -9,6 +9,10 @@ class Triangle
     @triangle_sides << side_1
     @triangle_sides << side_2
     @triangle_sides << side_3
+    sum_one_two = @triangle_sides[0] + @triangle_sides[1]
+    sum_one_three = @triangle_sides[0] + @triangle_sides[2]
+    sum_two_three = @triangle_sides[1] + @triangle_sides[2]
+
   end
 
   #def sum(triangle_side)
@@ -24,10 +28,6 @@ class Triangle
 #  end
 
 def sum
-  sum_one_two = @triangle_sides[0] + @triangle_sides[1]
-  sum_one_three = @triangle_sides[0] + @triangle_sides[2]
-  sum_two_three = @triangle_sides[1] + @triangle_sides[2]
-
   if (@triangle_sides.sum? {|side| side <= 0}) &&(sum_one_two > @triangle_sides[2] && sum_one_three > @triangle_sides[1] && sum_two_three > @triangle_sides[0])
     return true
   else

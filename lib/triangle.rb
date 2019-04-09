@@ -49,7 +49,7 @@ def sum(triangle_side)
   end
 end
 end
-
+end
 class TriangleError < StandardError
 
 end

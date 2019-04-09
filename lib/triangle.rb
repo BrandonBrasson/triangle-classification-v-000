@@ -45,11 +45,11 @@ def kind
     else
       return :scalene
     end
-
+end
 end
 
 
-class TriangleError 
+class TriangleError
 
 end
 

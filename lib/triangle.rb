@@ -46,7 +46,7 @@ def kind
       return :scalene
     end
   else
-    self.TriangleError
+    raise TriangleError
   end
 end
 end

@@ -36,7 +36,7 @@ def sum
   end
 end
 
-def side
+def kind
   if sum
     if @triangle_sides.uniq.length == 1
       return :equilateral
@@ -46,7 +46,7 @@ def side
       return :scalene
     end
   else
-    raise TriangleError
+    self.TriangleError
   end
 end
 end

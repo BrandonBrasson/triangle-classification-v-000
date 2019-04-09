@@ -44,14 +44,14 @@ def sum(triangle_side)
    else
      return :scalene
     end
-  end
+
 end
 end
 
 class TriangleError < StandardError
 
 end
-
+end
       #  triangle_side.each_with_index {|name, index|  print " #{index +1}. #{name}" }
 
       #else

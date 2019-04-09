@@ -44,9 +44,6 @@ def kind
       return :isosceles
     else
       return :scalene
-    end
-  else
-    raise TriangleError
   end
 end
 end

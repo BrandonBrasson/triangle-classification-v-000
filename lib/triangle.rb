@@ -11,24 +11,10 @@ class Triangle
     @triangle_sides << side_3
   end
 
-  def sum (@triangle_side)
-    if sum
-      if @triangle_sides.uniq.length == 1
-        return :equilateral
-      elsif @triangle_sides.uniq.length == 2
-        return :isosceles
-      else
-        return :scalene
-      end
-      #  triangle_side.each_with_index {|name, index|  print " #{index +1}. #{name}" }
-      else
-      #  puts "The line is currently empty."
-      end
-    end
-
-     sum_one_two = @triangle_sides[0] + @triangle_sides[1]
-    ,sum_one_three = @triangle_sides[0] + @triangle_sides[2]
-    ,sum_two_three = @triangle_sides[1] + @triangle_sides[2]
+  def valid?
+    sum_one_two = @triangle_sides[0] + @triangle_sides[1]
+    sum_one_three = @triangle_sides[0] + @triangle_sides[2]
+    sum_two_three = @triangle_sides[1] + @triangle_sides[2]
 
     if (@triangle_sides.none? {|side| side <= 0}) &&
       (sum_one_two > @triangle_sides[2] && sum_one_three > @triangle_sides[1] && sum_two_three > @triangle_sides[0])
@@ -38,7 +24,20 @@ class Triangle
     end
   end
 
-  d
+  def kind
+    if valid?
+      if @triangle_sides.uniq.length == 1
+        return :equilateral
+      elsif @triangle_sides.uniq.length == 2
+        return :isosceles
+      else
+        return :scalene
+      end
+    else
+      raise TriangleError
+    end
+  end
+end
 
 class TriangleError < StandardError
 

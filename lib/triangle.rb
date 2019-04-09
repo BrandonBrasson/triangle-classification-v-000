@@ -23,7 +23,7 @@ class Triangle
   #  end
 #  end
 
-def valid?
+def sum
   sum_one_two = @triangle_sides[0] + @triangle_sides[1]
   sum_one_three = @triangle_sides[0] + @triangle_sides[2]
   sum_two_three = @triangle_sides[1] + @triangle_sides[2]
@@ -37,7 +37,7 @@ def valid?
 end
 
 def kind
-  if valid?
+  if vsum
     if @triangle_sides.uniq.length == 1
       return :equilateral
     elsif @triangle_sides.uniq.length == 2

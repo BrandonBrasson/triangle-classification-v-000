@@ -35,7 +35,7 @@ def sum
     return false
   end
 end
-
+# i hate this lab
 def kind
   if sum
     if @triangle_sides.uniq.length == 1
@@ -44,10 +44,13 @@ def kind
       return :isosceles
     else
       return :scalene
+    end
+  else
+    raise TriangleError
   end
 end
 end
-end
+
 class TriangleError < StandardError
 
 end

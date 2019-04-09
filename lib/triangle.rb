@@ -52,7 +52,7 @@ end
 end
 
 class TriangleError < StandardError
-
+puts "help me "
 end
 
       #  triangle_side.each_with_index {|name, index|  print " #{index +1}. #{name}" }

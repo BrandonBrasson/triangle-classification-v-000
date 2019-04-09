@@ -37,7 +37,7 @@ def sum
 end
 
 def kind
-  if vsum
+  if sum
     if @triangle_sides.uniq.length == 1
       return :equilateral
     elsif @triangle_sides.uniq.length == 2

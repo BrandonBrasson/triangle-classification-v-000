@@ -39,19 +39,21 @@ end
 def sum(triangle_side)
   if @triangle_sides.uniq.length == 1
      return :equilateral
-   elsif @triangle_sides.uniq.length == 2
+ elsif @triangle_sides.uniq.length == 2
      return :isosceles
    else
      return :scalene
     end
-
+  else
+    raise TriangleError
+  end
 end
 end
 
 class TriangleError < StandardError
 
 end
-end
+
       #  triangle_side.each_with_index {|name, index|  print " #{index +1}. #{name}" }
 
       #else

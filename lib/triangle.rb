@@ -23,6 +23,17 @@ class Triangle
   #  end
 #  end
 
+def sum
+  sum_one_two = @triangle_sides[0] + @triangle_sides[1]
+  sum_one_three = @triangle_sides[0] + @triangle_sides[2]
+  sum_two_three = @triangle_sides[1] + @triangle_sides[2]
+
+  if (@triangle_sides {|side| side <= 0}) &&(sum_one_two > @triangle_sides[2] && sum_one_three > @triangle_sides[1] && sum_two_three > @triangle_sides[0])
+    return true
+  else
+    return false
+  end
+end
 
 def kind
   if sum
